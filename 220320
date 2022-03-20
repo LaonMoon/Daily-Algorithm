@@ -1,0 +1,10 @@
+#피보나치 수열
+
+def numberadd(a,b,index,n):
+    i = a+b
+    a = b
+    b= i
+    index +=1
+    if index ==n-2:
+        return i
+    return numberadd(a,b,index,n)
