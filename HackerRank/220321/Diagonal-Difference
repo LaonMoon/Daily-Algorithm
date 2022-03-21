@@ -1,0 +1,12 @@
+def diagonalDifference(arr):
+    # Write your code here
+    right_top = 0
+    right_down = 0
+    n = len(arr[0])
+    for i in range(n):
+        for j in range(n):
+            if i==j:
+                right_down += arr[i][j]
+            if j==(n-i-1):
+                right_top += arr[i][j]
+    return abs(right_down-right_top)
