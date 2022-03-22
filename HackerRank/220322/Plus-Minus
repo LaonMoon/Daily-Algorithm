@@ -1,0 +1,18 @@
+def plusMinus(arr):
+    # Write your code here
+    plus_count = 0
+    minus_count = 0
+    zero_count = 0
+    result_arr =[]
+    for i in range(len(arr)):
+        if arr[i]==0:
+            zero_count += 1
+        if arr[i]>0:
+            plus_count += 1 
+        if arr[i]<0:
+            minus_count += 1
+    result_arr.append(round(plus_count/len(arr), 6))
+    result_arr.append(round(minus_count/len(arr), 6))
+    result_arr.append(round(zero_count/len(arr), 6)) 
+    for i in range(3):
+        print('%f' % result_arr[i])
