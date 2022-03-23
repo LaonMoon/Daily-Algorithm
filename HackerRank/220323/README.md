@@ -1,0 +1,3 @@
+- if a == 3 or 4:와 if a == 3 or a == 4:는 다르다.
+- python map(https://blockdmask.tistory.com/531)
+- 입력받은 list의 순서와 출력하는 list의 순서가 같아야 하는 경우 체크하기.
