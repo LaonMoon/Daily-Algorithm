@@ -1,0 +1,13 @@
+def countApplesAndOranges(s, t, a, b, apples, oranges):
+    # Write your code here
+    house_apple = []
+    house_orange = []
+    for i in range(len(apples)):
+        apple_place = a + apples[i]
+        if s-1<apple_place<t+1:
+           house_apple.append(apple_place)
+    for i in range(len(oranges)):
+        orange_place = b + oranges[i]
+        if s-1<orange_place<t+1:
+            house_orange.append(orange_place)
+    print(len(house_apple),'\n'+str(len(house_orange)))
