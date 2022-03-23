@@ -1,0 +1,17 @@
+def gradingStudents(grades):
+    # Write your code here
+    grade_list = []
+    for i in grades:
+        if i > 37:
+            #3,4 or 8,9 will round grade up
+            check_list = list(map(int, str(i)))
+            if check_list[-1] == 3 or check_list[-1] == 4:
+                grade_list.append(int(''.join([str(check_list[0]),'5'])))
+            elif check_list[-1] == 8 or check_list[-1] == 9:
+                grade_list.append(int(''.join([str(check_list[0]+1),'0'])))
+            else:
+                grade_list.append(i)
+        else:
+            grade_list.append(i)
+
+    return grade_list
