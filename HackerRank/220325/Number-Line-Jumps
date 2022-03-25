@@ -1,0 +1,18 @@
+def kangaroo(x1, v1, x2, v2):
+    i = 1
+    prior_difference = x2-x1
+    while True:
+        if x1+i*v1 == x2+i*v2:
+            answer = "YES"
+            break
+        #if kangaroo 2 is faster
+        if prior_difference<=((x2+i*v2) - (x1+i*v1)):
+            answer = "NO"
+            break
+        #if kangaroo 1 is faster
+        if x1+i*v1 > x2+i*v2:
+            answer = "NO"
+            break
+        prior_difference = x2+i*v2 - x1+i*v1
+        i += 1
+    return answer
