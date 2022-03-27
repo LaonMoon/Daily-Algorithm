@@ -1,0 +1,10 @@
+# Determine how many ways she can divide the chocolate.
+def birthday(s, d, m):
+    length = m
+    count = 0
+    for i in range(len(s)):
+        sumList = s[i:i+m]
+        sumNum = sum(sumList)
+        if sumNum==d:
+            count += 1 
+    return count
