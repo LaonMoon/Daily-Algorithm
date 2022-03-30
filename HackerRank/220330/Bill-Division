@@ -1,0 +1,8 @@
+def bonAppetit(bill, k, b):
+    # Write your code here
+    doesnt_eat =  bill.pop(k)
+    correct_sum = sum(bill)/2
+    if correct_sum == b:
+        print("Bon Appetit")
+    elif b > correct_sum:
+        print(int(doesnt_eat/2))
